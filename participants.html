@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deltagelser</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="loadParticipants()">
+<nav class="navbar">
+  <ul>
+    <li><a href="boats.html">Boats</a></li>
+    <li><a href="participants.html">Participants</a></li>
+    <li><a href="regattas.html">Regattas</a></li>
+  </ul>
+</nav>
+<br>
+<div class="container">
+<form id="createParticipants" onsubmit="createParticipants()">
+  <label for="regattaId">Vælg sejlads</label>
+  <select id="allRegattasToAdd" name="regattaId">
+    <!-- Regattas will be dynamically added here -->
+    </select>
+  <br>
+  <br>
+  <div id="boatTable" class="boat-table">
+    <div id="boatTableBody" class="boat-table-body">
+      <div class="boat-table-row" style="cursor: default">
+        <div class="boat-table-cell">Id</div>
+        <div class="boat-table-cell">Størrelse</div>
+        <div class="boat-table-cell">Fjern fra kapsejlads</div>
+      </div>
+        <!-- Boats will be dynamically added here -->
+    </div>
+    <br>
+    <div class="add-boat">
+        <label for="boatId">Vælg båd</label>
+      <select id="allBoatsToAdd" name="boatId">
+        <!-- Boats will be dynamically added here -->
+      </select>
+      <br>
+      <br>
+      <button type="button" id="addBoatButton">Add Boat</button>
+    </div>
+    <br>
+    <button type="submit">Tilføj deltagere til sejlads</button>
+  </div>
+</form>
+<br>
+<div id="allParticipants" class="all-participants">
+  <table id="participantsTable">
+    <thead>
+      <tr id="participantsTableHeadRow">
+        <th>Båd</th>
+        <th>Totale point</th>
+      </tr>
+    </thead>
+    <tbody id="participantsTableBody">
+      <!-- Participants will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+</div>
+<script src="js/boat.js"></script>
+<script src="js/participant.js"></script>
+<script src="js/regatta.js"></script>
+</body>
+</html>

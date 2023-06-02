@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sejlads</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="loadRegattas()">
+<nav class="navbar">
+    <ul>
+        <li><a href="boats.html">Boats</a></li>
+        <li><a href="participants.html">Participants</a></li>
+        <li><a href="regattas.html">Regattas</a></li>
+    </ul>
+</nav>
+<br>
+<div class="container">
+<div id="createRegattaOverlay">
+    <div class="overlay-content">
+        <form id="createRegatta" onsubmit="createRegatta()">
+            <input type="text" id="regattaName" name="name" placeholder="Navn">
+            <select id="regattaType" name="type">
+                <option value="SMALL">Lille</option>
+                <option value="MEDIUM">Mellem</option>
+                <option value="LARGE">Stor</option>
+            </select>
+            <button type="submit">Opret sejlads</button>
+        </form>
+    </div>
+</div>
+<br>
+<div id="regattaTableContainer">
+    <table id="regattaTable">
+        <thead id="regattaTableHead">
+            <tr>
+                <th>Id</th>
+                <th>Navn</th>
+                <th>Type</th>
+                <th>1.</th>
+                <th>2.</th>
+                <th>3.</th>
+                <th>Slet</th>
+                <th>Rediger</th>
+            </tr>
+        </thead>
+        <tbody id="regattaTableBody">
+        </tbody>
+    </table>
+</div>
+</div>
+
+<script src="js/boat.js"></script>
+<script src="js/participant.js"></script>
+<script src="js/regatta.js"></script>
+</body>
+</html>

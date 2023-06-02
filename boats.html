@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Både</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/participant.js"></script>
+    <script src="js/regatta.js"></script>
+</head>
+<body onload="getBoats()">
+<nav class="navbar">
+    <ul>
+        <li><a href="boats.html">Boats</a></li>
+        <li><a href="participants.html">Participants</a></li>
+        <li><a href="regattas.html">Regattas</a></li>
+    </ul>
+</nav>
+<br>
+<div class="container">
+<form id="createBoat" onsubmit="createBoat()">
+    <select id="boatSize" name="size">
+        <option name="small" value="SMALL">Lille</option>
+        <option name="medium" value="MEDIUM">Mellem</option>
+        <option name="large" value="LARGE">Stor</option>
+    </select>
+    <button type="submit">Opret båd</button>
+</form>
+
+<br>
+<table id="boatTable">
+    <thead id="boatTableHead">
+        <tr>
+            <th>Id</th>
+            <th>Størrelse</th>
+            <th>Tilføj til alle kapsejlads</th>
+            <th>Slet</th>
+            <th>Rediger</th>
+        </tr>
+    </thead>
+    <tbody id="boatTableBody">
+    </tbody>
+</table>
+</div>
+<script src="js/boat.js"></script>
+</body>
+</html>
