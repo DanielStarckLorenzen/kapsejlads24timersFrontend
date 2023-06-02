@@ -21,7 +21,12 @@ body {
     border: #505f72 1px solid;
 }
 
-.boat-table-body {
+#boatTable {
+    width: 100%;
+    border: #505f72 1px solid;
+}
+
+.boat-table-body, #boatTableBody {
     border: #505f72 1px solid;
     border-top: none;
     cursor: move;
